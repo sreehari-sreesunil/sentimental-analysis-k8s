@@ -48,7 +48,7 @@ Streamlit UI ──→ API Gateway ──→ Inference Service
 
 ### Public – API Gateway
 
-```http
+
 POST /analyze
 
 ### Request Flow
