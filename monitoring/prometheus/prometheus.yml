@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s     # How often to scrape metrics
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'inference-service'
+    static_configs:
+      - targets: ['inference:8001']   # Service name + internal port (Docker network)
+
+  - job_name: 'prometheus'          # Self-monitoring (optional but nice)
+    static_configs:
+      - targets: ['localhost:9090']
